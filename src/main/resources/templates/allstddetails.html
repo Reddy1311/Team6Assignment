@@ -1,0 +1,52 @@
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+	
+	<head>
+		<title>Students List</title>
+		
+		<link rel="stylesheet" 
+			href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"/> 
+			
+	</head>
+	
+	<body>
+		
+		<div class="container">
+		
+			<h3 style="margin-top:25px;">Stddetails</h3>
+			
+			<hr/>
+		
+			<table class="table table-bordered table-striped">
+			
+				<thead>
+					<tr>
+						<th>Stdid</th>
+						<th>Firstname</th>
+						<th>Lastname</th>
+					    <th>Semester</th>
+					    <th>Marks</th>
+					    <th>Grades</th>
+					    <th>Remarks</th>
+
+					</tr>
+				</thead>
+				<tbody>
+					<tr th:each="student: ${stddetails}">
+						<td th:text="${student.stdid}" />
+						<td th:text="${student.Firstname}" />
+						<td th:text="${student.Lastname}" />
+						<td th:text="${student.Semester}" />
+						<td th:text="${student.Marks}" />
+						<td th:text="${student.Grades}" />
+						<td th:text="${student.Remarks}" />
+
+					</tr>
+				</tbody>
+				
+			</table>
+		</div>
+		
+		
+	</body>
+	
+</html>
